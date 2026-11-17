@@ -1,6 +1,6 @@
 
 // ========================================
-// PIXLEY - PIXELLI EXAM
+// PIXELY - PIXELLI EXAM
 // JS 1-1 : NAVIGATION / PARTICLES / VALIDATION
 // ========================================
 
@@ -290,7 +290,7 @@ if (nicknameInput) {
 
 
 // ========================================
-// PIXLEY - PIXELLI EXAM
+// PIXELY - PIXELLI EXAM
 // JS 1-2 : TICKET GENERATOR / IMAGE EXPORT
 // ========================================
 
@@ -438,7 +438,7 @@ captureScript.src =
 captureScript.crossOrigin = "anonymous";
 
 captureScript.onload = () => {
-  console.log("PIXLEY IMAGE SYSTEM READY");
+  console.log("PIXELY IMAGE SYSTEM READY");
 };
 
 captureScript.onerror = () => {
@@ -510,7 +510,7 @@ if (downloadButton) {
       downloadLink.href = imageURL;
 
       downloadLink.download =
-        `PIXLEY_수험표_${nicknameInput.value.trim() || "PLAYER"}.png`;
+        `PIXELY_수험표_${nicknameInput.value.trim() || "PLAYER"}.png`;
 
 
       // 다운로드 실행
@@ -548,16 +548,16 @@ if (downloadButton) {
 document.addEventListener("DOMContentLoaded", () => {
 
   console.log(
-    "%c PIXLEY EXAM SYSTEM ",
+    "%c PIXELY EXAM SYSTEM ",
     "background:#315B91;color:white;padding:8px;font-weight:bold;"
   );
 
-  console.log("Welcome to PIXLEY!");
+  console.log("Welcome to PIXELY!");
 
 });
 
 
 /* ========================================
-   END OF PIXLEY SCRIPT
+   END OF PIXELY SCRIPT
 ======================================== */
 
