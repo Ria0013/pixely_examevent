@@ -1,6 +1,6 @@
 
 // ========================================
-// PIXLY - PIXELLI EXAM
+// PIXLEY - PIXELLI EXAM
 // JS 1-1 : NAVIGATION / PARTICLES / VALIDATION
 // ========================================
 
@@ -15,7 +15,7 @@
 const EXAM_LINKS = {
   event: "",
   rule: "",
-  rader: "",
+  rader: "https://forms.gle/49ooyGvHofc5rqRC7",
   deokgae: "",
   gakbyeol: "",
   gongryong: "",
@@ -153,7 +153,7 @@ function setupExamLinks() {
       button.href = "#";
       button.addEventListener("click", event => {
         event.preventDefault();
-        alert("아직 연결된 게시글 주소가 없어!");
+        alert("아직 연결된 게시글 주소가 없습니다!");
       });
 
     }
@@ -290,7 +290,7 @@ if (nicknameInput) {
 
 
 // ========================================
-// PIXLY - PIXELLI EXAM
+// PIXLEY - PIXELLI EXAM
 // JS 1-2 : TICKET GENERATOR / IMAGE EXPORT
 // ========================================
 
@@ -331,7 +331,7 @@ function generateTicket() {
   // 닉네임 확인
   if (!nickname) {
 
-    alert("닉네임을 입력해 줘!");
+    alert("닉네임을 입력해 주세요!");
 
     nicknameInput.focus();
 
@@ -438,11 +438,11 @@ captureScript.src =
 captureScript.crossOrigin = "anonymous";
 
 captureScript.onload = () => {
-  console.log("PIXLY IMAGE SYSTEM READY");
+  console.log("PIXLEY IMAGE SYSTEM READY");
 };
 
 captureScript.onerror = () => {
-  console.error("이미지 저장 라이브러리를 불러오지 못했어.");
+  console.error("이미지 저장 라이브러리를 불러오지 못했습니다.");
 };
 
 document.head.appendChild(captureScript);
@@ -467,7 +467,7 @@ if (downloadButton) {
     if (typeof html2canvas === "undefined") {
 
       alert(
-        "이미지 저장 기능을 준비하고 있어. 잠시 후 다시 시도해 줘!"
+        "이미지 저장 기능을 준비하고 있어요. 잠시 후 다시 시도해 주세요!"
       );
 
       return;
@@ -510,7 +510,7 @@ if (downloadButton) {
       downloadLink.href = imageURL;
 
       downloadLink.download =
-        `PIXLY_수험표_${nicknameInput.value.trim() || "PLAYER"}.png`;
+        `PIXLEY_수험표_${nicknameInput.value.trim() || "PLAYER"}.png`;
 
 
       // 다운로드 실행
@@ -525,7 +525,7 @@ if (downloadButton) {
       console.error("수험표 저장 실패:", error);
 
       alert(
-        "이미지를 저장하지 못했어. 인터넷 연결을 확인하고 다시 시도해 줘!"
+        "이미지를 저장하지 못했어요. 인터넷 연결을 확인하고 다시 시도해 주세요!"
       );
 
     } finally {
@@ -548,16 +548,16 @@ if (downloadButton) {
 document.addEventListener("DOMContentLoaded", () => {
 
   console.log(
-    "%c PIXLY EXAM SYSTEM ",
+    "%c PIXLEY EXAM SYSTEM ",
     "background:#315B91;color:white;padding:8px;font-weight:bold;"
   );
 
-  console.log("Welcome to PIXLY!");
+  console.log("Welcome to PIXLEY!");
 
 });
 
 
 /* ========================================
-   END OF PIXLY SCRIPT
+   END OF PIXLEY SCRIPT
 ======================================== */
 
