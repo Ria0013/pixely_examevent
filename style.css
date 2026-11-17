@@ -1,0 +1,1521 @@
+
+/* ========================================
+   PIXLY - PIXELLI EXAM
+   CSS 1-1 : BASE & MAIN VISUAL
+======================================== */
+
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap');
+
+
+/* ========================================
+   01. COLOR SYSTEM
+======================================== */
+
+:root {
+  --red: #EF7278;
+  --orange: #F3A05D;
+  --yellow: #E8C74D;
+  --green: #70B982;
+  --sky: #71BBD8;
+  --purple: #9B82D0;
+
+  --navy: #294C6B;
+  --deep-blue: #315B91;
+  --text: #344D63;
+  --sub-text: #829BAD;
+
+  --background: #FFFFFF;
+  --light-blue: #F3F9FD;
+  --grid-blue: #E7F2F9;
+  --line: #DCEAF3;
+
+  --pixel-font: 'Press Start 2P', 'Silkscreen', monospace;
+  --main-font: 'Noto Sans KR', sans-serif;
+  --title-font: 'Do Hyeon', sans-serif;
+}
+
+
+/* ========================================
+   02. RESET
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+}
+
+body {
+  min-width: 320px;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--main-font);
+  overflow-x: hidden;
+  position: relative;
+  line-height: 1.6;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+
+/* ========================================
+   03. BACKGROUND GRID
+======================================== */
+
+.background-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+
+  background-color: #FFFFFF;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(170, 211, 235, 0.19) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(170, 211, 235, 0.19) 1px,
+      transparent 1px
+    );
+
+  background-size: 24px 24px;
+}
+
+
+/* ========================================
+   04. PARTICLE SYSTEM
+======================================== */
+
+.particle-container {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.pixel-particle {
+  position: absolute;
+  display: block;
+
+  width: 5px;
+  height: 5px;
+
+  opacity: 0.35;
+
+  animation: particle-float 7s ease-in-out infinite;
+}
+
+@keyframes particle-float {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(8px, -18px, 0);
+  }
+}
+
+
+/* ========================================
+   05. PIXEL COLOR TEXT
+======================================== */
+
+.pixel-color-red {
+  color: var(--red);
+}
+
+.pixel-color-orange {
+  color: var(--orange);
+}
+
+.pixel-color-yellow {
+  color: var(--yellow);
+}
+
+.pixel-color-green {
+  color: var(--green);
+}
+
+.pixel-color-sky {
+  color: var(--sky);
+}
+
+.pixel-color-purple {
+  color: var(--purple);
+}
+
+
+/* ========================================
+   06. SITE LAYOUT
+======================================== */
+
+.site-wrapper {
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 0 auto;
+  padding: 0 30px;
+
+  position: relative;
+}
+
+.content-section {
+  width: 100%;
+  padding: 90px 0;
+
+  position: relative;
+}
+
+.site-header {
+  width: 100%;
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: var(--navy);
+
+  font-family: var(--pixel-font);
+  font-size: 15px;
+  letter-spacing: -1px;
+}
+
+.logo-pixel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 28px;
+  height: 28px;
+
+  background: var(--navy);
+  color: white;
+
+  font-family: var(--pixel-font);
+  font-size: 12px;
+}
+
+.header-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-family: var(--pixel-font);
+  font-size: 8px;
+  color: var(--sub-text);
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  background: var(--green);
+  box-shadow: 0 0 0 3px rgba(112, 185, 130, 0.15);
+}
+
+
+/* ========================================
+   07. HERO SECTION
+======================================== */
+
+.hero-section {
+  min-height: 650px;
+
+  padding: 85px 20px 35px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  position: relative;
+}
+
+.hero-decoration {
+  position: absolute;
+
+  font-family: var(--pixel-font);
+  font-size: 30px;
+
+  opacity: 0.45;
+}
+
+.hero-decoration-left {
+  left: 10%;
+  top: 25%;
+
+  color: var(--sky);
+}
+
+.hero-decoration-right {
+  right: 12%;
+  top: 35%;
+
+  color: var(--yellow);
+}
+
+.hero-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 35px;
+
+  color: var(--sub-text);
+
+  font-family: var(--pixel-font);
+  font-size: 8px;
+  letter-spacing: 0;
+}
+
+.hero-label-line {
+  width: 25px;
+  height: 1px;
+
+  background: var(--sky);
+}
+
+.hero-title-wrap {
+  width: 100%;
+}
+
+.hero-subtitle {
+  margin-bottom: 18px;
+
+  color: #9BB6C8;
+
+  font-family: var(--pixel-font);
+  font-size: 10px;
+
+  letter-spacing: 2px;
+}
+
+.hero-title {
+  font-family: var(--pixel-font);
+
+  font-size: clamp(42px, 9vw, 76px);
+  line-height: 1.5;
+
+  letter-spacing: -5px;
+
+  text-shadow: 4px 4px 0 rgba(41, 76, 107, 0.07);
+}
+
+.hero-korean-title {
+  margin-top: 8px;
+
+  color: var(--navy);
+
+  font-family: var(--title-font);
+  font-size: clamp(34px, 6vw, 48px);
+
+  letter-spacing: 3px;
+}
+
+.hero-description {
+  margin-top: 15px;
+
+  color: #91A9BA;
+
+  font-family: var(--pixel-font);
+  font-size: 8px;
+
+  letter-spacing: 0;
+}
+
+
+/* ========================================
+   08. EVENT PERIOD
+======================================== */
+
+.event-period {
+  margin-top: 45px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.period-label {
+  color: var(--sub-text);
+
+  font-family: var(--pixel-font);
+  font-size: 8px;
+}
+
+.period-date {
+  color: var(--navy);
+
+  font-size: 17px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+/* ========================================
+   09. HERO DIVIDER
+======================================== */
+
+.hero-divider {
+  width: min(100%, 320px);
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin: 40px 0;
+}
+
+.hero-divider > span:not(.divider-star) {
+  flex: 1;
+  height: 1px;
+
+  background: var(--line);
+}
+
+.divider-star {
+  color: var(--sky);
+  font-size: 13px;
+}
+
+
+/* ========================================
+   10. HERO NAVIGATION
+======================================== */
+
+.hero-navigation {
+  width: min(100%, 380px);
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-nav-button {
+  width: 100%;
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 0 18px;
+
+  border: 1px solid var(--deep-blue);
+  border-radius: 2px;
+
+  background: var(--deep-blue);
+  color: white;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.hero-nav-button:hover {
+  background: #24466F;
+
+  transform: translateY(-3px);
+
+  box-shadow: 3px 3px 0 rgba(41, 76, 107, 0.16);
+}
+
+.nav-number {
+  color: #BBD9F1;
+
+  font-family: var(--pixel-font);
+  font-size: 9px;
+}
+
+.nav-text {
+  flex: 1;
+
+  text-align: left;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.nav-arrow {
+  font-size: 20px;
+  transition: transform 0.2s ease;
+}
+
+.hero-nav-button:hover .nav-arrow {
+  transform: translateX(5px);
+}
+
+
+/* ========================================
+   11. HERO FOOTER
+======================================== */
+
+.hero-footer {
+  width: min(100%, 380px);
+
+  margin-top: 30px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  color: #A1B6C5;
+
+  font-family: var(--pixel-font);
+  font-size: 7px;
+}
+
+
+
+/* ========================================
+   PIXLY - PIXELLI EXAM
+   CSS 1-2 : EXAM / FORM / TICKET / MOBILE
+======================================== */
+
+
+/* ========================================
+   12. SECTION HEADING
+======================================== */
+
+.section-heading {
+  margin-bottom: 35px;
+}
+
+.section-index {
+  margin-bottom: 12px;
+
+  color: var(--sky);
+
+  font-family: var(--pixel-font);
+  font-size: 9px;
+}
+
+.section-title {
+  color: var(--navy);
+
+  font-family: var(--title-font);
+  font-size: 36px;
+
+  letter-spacing: 1px;
+}
+
+.section-description {
+  margin-top: 9px;
+
+  color: var(--sub-text);
+  font-size: 14px;
+}
+
+
+/* ========================================
+   13. NOTICE PANEL
+======================================== */
+
+.notice-panel {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 17px 20px;
+
+  margin-bottom: 28px;
+
+  background: #FFF6F5;
+  border: 1px solid #F1C5C5;
+  border-radius: 2px;
+}
+
+.notice-icon {
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #E97676;
+  color: white;
+
+  font-family: var(--pixel-font);
+  font-size: 12px;
+}
+
+.notice-content strong {
+  display: block;
+
+  color: #CA6868;
+
+  font-family: var(--pixel-font);
+  font-size: 8px;
+}
+
+.notice-content p {
+  margin-top: 4px;
+
+  color: #A85B5B;
+  font-size: 13px;
+}
+
+
+/* ========================================
+   14. EXAM BUTTON GRID
+======================================== */
+
+.exam-button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.exam-button {
+  min-height: 82px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 15px 17px;
+
+  background: white;
+
+  border: 1px solid var(--button-color);
+  border-left: 5px solid var(--button-color);
+  border-radius: 2px;
+
+  color: var(--text);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.exam-button:hover {
+  transform: translateY(-3px);
+
+  background: var(--button-light);
+
+  box-shadow: 3px 3px 0 rgba(41, 76, 107, 0.08);
+}
+
+.exam-button-icon {
+  width: 33px;
+  height: 33px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--button-light);
+  color: var(--button-color);
+
+  font-size: 15px;
+}
+
+.exam-button-info {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.exam-button-info strong {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.exam-button-info small {
+  color: var(--button-color);
+
+  font-family: var(--pixel-font);
+  font-size: 7px;
+}
+
+.exam-button-arrow {
+  color: var(--button-color);
+  font-size: 19px;
+
+  transition: transform 0.2s ease;
+}
+
+.exam-button:hover .exam-button-arrow {
+  transform: translateX(4px);
+}
+
+
+/* CHARACTER COLORS */
+
+.exam-event,
+.exam-rule {
+  --button-color: #315B91;
+  --button-light: #EFF5FC;
+}
+
+.exam-rader {
+  --button-color: var(--red);
+  --button-light: #FFF0F1;
+}
+
+.exam-deokgae {
+  --button-color: var(--orange);
+  --button-light: #FFF5EB;
+}
+
+.exam-gakbyeol {
+  --button-color: #D3AD35;
+  --button-light: #FFF9E5;
+}
+
+.exam-gongryong {
+  --button-color: var(--green);
+  --button-light: #F0F9F1;
+}
+
+.exam-jamtteul {
+  --button-color: var(--sky);
+  --button-light: #EFF9FD;
+}
+
+.exam-suhyeon {
+  --button-color: var(--purple);
+  --button-light: #F5F1FC;
+}
+
+
+/* ========================================
+   15. SECTION BOTTOM NOTE
+======================================== */
+
+.section-bottom-note {
+  margin-top: 28px;
+  padding-top: 15px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  border-top: 1px solid var(--line);
+
+  color: #9BAFBE;
+
+  font-family: var(--pixel-font);
+  font-size: 7px;
+}
+
+
+/* ========================================
+   16. FORM SECTION
+======================================== */
+
+.ticket-form-section {
+  border-top: 1px solid var(--line);
+}
+
+.form-guide-panel {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+
+  padding: 17px;
+
+  margin-bottom: 30px;
+
+  background: #F1F8FD;
+  border: 1px solid #D6EAF5;
+  border-radius: 2px;
+}
+
+.guide-icon {
+  width: 25px;
+  height: 25px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--sky);
+  color: white;
+
+  font-family: var(--pixel-font);
+  font-size: 11px;
+}
+
+.form-guide-panel strong {
+  color: var(--navy);
+
+  font-family: var(--pixel-font);
+  font-size: 8px;
+}
+
+.form-guide-panel p {
+  margin-top: 5px;
+
+  color: #728FA5;
+  font-size: 13px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.form-group label {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form-label-number {
+  margin-right: 8px;
+
+  color: var(--sky);
+
+  font-family: var(--pixel-font);
+  font-size: 9px;
+}
+
+.required-mark {
+  color: var(--red);
+}
+
+.nickname-group {
+  margin-bottom: 27px;
+}
+
+.form-group input {
+  width: 100%;
+  height: 48px;
+
+  padding: 0 15px;
+
+  outline: none;
+
+  background: white;
+
+  border: 1px solid #D6E5EF;
+  border-radius: 2px;
+
+  color: var(--navy);
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #B0C0CB;
+}
+
+.form-group input:focus {
+  border-color: var(--sky);
+  box-shadow: 0 0 0 3px rgba(113, 187, 216, 0.13);
+}
+
+
+/* ========================================
+   17. SCORE GUIDE
+======================================== */
+
+.score-guide {
+  margin-bottom: 22px;
+  padding: 16px 18px;
+
+  background: #FAFCFE;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+}
+
+.score-guide strong {
+  color: var(--navy);
+
+  font-family: var(--pixel-font);
+  font-size: 8px;
+}
+
+.score-guide p {
+  margin-top: 5px;
+
+  color: var(--sub-text);
+  font-size: 12px;
+}
+
+
+/* ========================================
+   18. SCORE INPUT GRID
+======================================== */
+
+.score-input-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 19px 16px;
+}
+
+.score-group {
+  position: relative;
+  padding-left: 11px;
+
+  border-left: 3px solid var(--score-color);
+}
+
+.score-group label {
+  font-size: 13px;
+}
+
+.score-group input {
+  height: 43px;
+}
+
+.score-event,
+.score-rule {
+  --score-color: #315B91;
+}
+
+.score-rader {
+  --score-color: var(--red);
+}
+
+.score-deokgae {
+  --score-color: var(--orange);
+}
+
+.score-gakbyeol {
+  --score-color: #D3AD35;
+}
+
+.score-gongryong {
+  --score-color: var(--green);
+}
+
+.score-jamtteul {
+  --score-color: var(--sky);
+}
+
+.score-suhyeon {
+  --score-color: var(--purple);
+}
+
+
+/* ========================================
+   19. SUBMIT BUTTON
+======================================== */
+
+.ticket-submit-button {
+  width: 100%;
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  margin-top: 32px;
+
+  border: 1px solid var(--deep-blue);
+  border-radius: 2px;
+
+  background: var(--deep-blue);
+  color: white;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ticket-submit-button:hover {
+  background: #24466F;
+  transform: translateY(-2px);
+}
+
+.submit-arrow {
+  font-size: 20px;
+}
+
+
+/* ========================================
+   20. RESULT SECTION
+======================================== */
+
+.result-section {
+  border-top: 1px solid var(--line);
+}
+
+.ticket-capture-area {
+  width: 100%;
+  padding: 15px;
+
+  background: #EFF7FC;
+  border: 1px solid #D5E8F3;
+}
+
+.issued-ticket {
+  width: 100%;
+  padding: 24px;
+
+  background: white;
+
+  border: 2px solid #A9CDE4;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.ticket-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 13px;
+
+  border-bottom: 1px solid var(--line);
+
+  color: #7895A8;
+
+  font-family: var(--pixel-font);
+  font-size: 8px;
+}
+
+.ticket-status {
+  color: var(--green);
+}
+
+.ticket-main-title {
+  padding: 24px 0;
+
+  text-align: center;
+}
+
+.ticket-title-en {
+  color: #90AFC4;
+
+  font-family: var(--pixel-font);
+  font-size: 8px;
+}
+
+.ticket-main-title h2 {
+  margin: 14px 0 8px;
+
+  color: var(--navy);
+
+  font-family: var(--title-font);
+  font-size: 39px;
+  letter-spacing: 5px;
+}
+
+.ticket-title-sub {
+  color: #9BB4C5;
+
+  font-family: var(--pixel-font);
+  font-size: 7px;
+}
+
+.ticket-name-area {
+  padding: 15px 17px;
+
+  background: #F3F9FD;
+  border: 1px solid #DCEAF3;
+}
+
+.ticket-field-label {
+  display: block;
+
+  color: #829BAD;
+
+  font-family: var(--pixel-font);
+  font-size: 7px;
+}
+
+.ticket-name-area strong {
+  display: block;
+
+  margin-top: 6px;
+
+  color: var(--navy);
+  font-size: 22px;
+  font-weight: 800;
+
+  overflow-wrap: anywhere;
+}
+
+.ticket-score-area {
+  margin-top: 20px;
+}
+
+.ticket-score-heading {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+
+  color: #819DAF;
+
+  font-family: var(--pixel-font);
+  font-size: 7px;
+}
+
+.ticket-score-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.ticket-score-item {
+  min-height: 63px;
+
+  padding: 10px 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  border: 1px solid var(--score-color);
+  border-left: 4px solid var(--score-color);
+  border-radius: 2px;
+
+  background: var(--score-bg);
+}
+
+.ticket-score-item span {
+  color: var(--score-color);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ticket-score-item strong {
+  color: var(--navy);
+  font-size: 17px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.ticket-score-item.score-event,
+.ticket-score-item.score-rule {
+  --score-color: #315B91;
+  --score-bg: #F1F6FC;
+}
+
+.ticket-score-item.score-rader {
+  --score-color: var(--red);
+  --score-bg: #FFF5F5;
+}
+
+.ticket-score-item.score-deokgae {
+  --score-color: var(--orange);
+  --score-bg: #FFF8F0;
+}
+
+.ticket-score-item.score-gakbyeol {
+  --score-color: #D3AD35;
+  --score-bg: #FFFBED;
+}
+
+.ticket-score-item.score-gongryong {
+  --score-color: var(--green);
+  --score-bg: #F2FAF3;
+}
+
+.ticket-score-item.score-jamtteul {
+  --score-color: var(--sky);
+  --score-bg: #F1FAFD;
+}
+
+.ticket-score-item.score-suhyeon {
+  --score-color: var(--purple);
+  --score-bg: #F7F4FC;
+}
+
+
+/* ========================================
+   21. TICKET DATE
+======================================== */
+
+.ticket-date-area {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+
+  margin-top: 20px;
+  padding: 15px 0;
+
+  border-top: 1px dashed #C9DDE9;
+}
+
+.ticket-date-area div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ticket-date-area div:last-child {
+  text-align: right;
+}
+
+.ticket-date-area span {
+  color: #91A9BA;
+
+  font-family: var(--pixel-font);
+  font-size: 7px;
+}
+
+.ticket-date-area strong {
+  color: var(--navy);
+  font-size: 12px;
+}
+
+.ticket-bottom {
+  padding: 12px 8px;
+
+  background: var(--navy);
+  color: white;
+
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.ticket-bottom span {
+  margin-left: 4px;
+  color: #C6E6F7;
+}
+
+.ticket-decor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 13px;
+
+  color: #A4C7DE;
+
+  font-family: var(--pixel-font);
+  font-size: 7px;
+}
+
+
+/* ========================================
+   22. TICKET ACTION BUTTONS
+======================================== */
+
+.ticket-actions {
+  display: flex;
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.ticket-download-button,
+.ticket-edit-button {
+  min-height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 0 16px;
+
+  border-radius: 2px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition: transform 0.2s ease;
+}
+
+.ticket-download-button {
+  flex: 1;
+
+  border: 1px solid var(--deep-blue);
+  background: var(--deep-blue);
+  color: white;
+}
+
+.ticket-edit-button {
+  border: 1px solid #C9DFED;
+  background: white;
+  color: var(--navy);
+}
+
+.ticket-download-button:hover,
+.ticket-edit-button:hover {
+  transform: translateY(-2px);
+}
+
+.ticket-share-guide {
+  margin-top: 13px;
+
+  text-align: center;
+
+  color: var(--sub-text);
+  font-size: 12px;
+}
+
+
+/* ========================================
+   23. FOOTER
+======================================== */
+
+.site-footer {
+  padding: 45px 15px 30px;
+
+  border-top: 1px solid var(--line);
+
+  text-align: center;
+}
+
+.footer-logo {
+  color: var(--navy);
+
+  font-family: var(--pixel-font);
+  font-size: 18px;
+}
+
+.site-footer p {
+  margin-top: 10px;
+
+  color: #8DA6B7;
+  font-size: 11px;
+}
+
+.footer-colors {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+
+  margin: 22px 0;
+  font-size: 13px;
+}
+
+.site-footer small {
+  color: #B0C0CB;
+
+  font-family: var(--pixel-font);
+  font-size: 7px;
+}
+
+
+/* ========================================
+   24. MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 650px) {
+
+  .site-wrapper {
+    padding: 0 17px;
+  }
+
+  .site-header {
+    height: 65px;
+  }
+
+  .header-logo {
+    font-size: 12px;
+  }
+
+  .header-status {
+    font-size: 6px;
+  }
+
+  .hero-section {
+    min-height: 590px;
+    padding: 65px 8px 35px;
+  }
+
+  .hero-title {
+    font-size: clamp(38px, 12vw, 65px);
+    letter-spacing: -4px;
+  }
+
+  .hero-korean-title {
+    font-size: 36px;
+  }
+
+  .hero-decoration-left {
+    left: 2%;
+  }
+
+  .hero-decoration-right {
+    right: 3%;
+  }
+
+  .content-section {
+    padding: 65px 0;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .section-description {
+    font-size: 13px;
+  }
+
+  .exam-button-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .exam-button {
+    min-height: 72px;
+  }
+
+  .score-input-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .ticket-capture-area {
+    padding: 8px;
+  }
+
+  .issued-ticket {
+    padding: 16px 12px;
+  }
+
+  .ticket-main-title h2 {
+    font-size: 34px;
+  }
+
+  .ticket-score-item {
+    padding: 9px 7px;
+    gap: 4px;
+  }
+
+  .ticket-score-item span {
+    font-size: 10px;
+  }
+
+  .ticket-score-item strong {
+    font-size: 14px;
+  }
+
+  .ticket-actions {
+    flex-direction: column;
+  }
+
+  .ticket-edit-button {
+    width: 100%;
+  }
+
+  .section-bottom-note {
+    font-size: 6px;
+  }
+
+}
+
+
+/* ========================================
+   25. SMALL MOBILE
+======================================== */
+
+@media (max-width: 380px) {
+
+  .site-wrapper {
+    padding: 0 12px;
+  }
+
+  .header-status {
+    font-size: 5px;
+  }
+
+  .hero-label {
+    font-size: 6px;
+    gap: 7px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .period-date {
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 27px;
+  }
+
+  .ticket-score-item span {
+    font-size: 9px;
+  }
+
+  .ticket-score-item strong {
+    font-size: 12px;
+  }
+
+  .ticket-date-area strong {
+    font-size: 10px;
+  }
+
+}
+
+
+/* ========================================
+   26. REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+}
