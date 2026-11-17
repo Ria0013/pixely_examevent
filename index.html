@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8fcff">
+  <meta name="description" content="PIXLY 픽셀리고사 - 픽셀리 비공식 카페 이벤트">
+  <title>PIXLY : 픽셀리고사</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Pixel Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- BACKGROUND EFFECT -->
+  <div class="background-grid"></div>
+  <div class="particle-container" id="particleContainer"></div>
+
+  <!-- MAIN WRAPPER -->
+  <main class="site-wrapper">
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <a href="#" class="header-logo" aria-label="PIXLY 홈">
+        <span class="logo-pixel">P</span>
+        <span>PIXLY</span>
+      </a>
+
+      <div class="header-status">
+        <span class="status-dot"></span>
+        PIXELI EXAM SYSTEM
+      </div>
+    </header>
+
+    <!-- SECTION 0 : MAIN VISUAL -->
+    <section class="hero-section" id="home">
+
+      <div class="hero-decoration hero-decoration-left">
+        ✦
+      </div>
+
+      <div class="hero-decoration hero-decoration-right">
+        +
+      </div>
+
+      <div class="hero-label">
+        <span class="hero-label-line"></span>
+        PIXELI UNOFFICIAL CAFE EVENT
+        <span class="hero-label-line"></span>
+      </div>
+
+      <div class="hero-title-wrap">
+        <div class="hero-subtitle">WELCOME TO</div>
+
+        <h1 class="hero-title">
+          <span class="pixel-color-red">P</span><span class="pixel-color-orange">I</span><span class="pixel-color-yellow">X</span><span class="pixel-color-green">L</span><span class="pixel-color-sky">Y</span>
+        </h1>
+
+        <h2 class="hero-korean-title">
+          픽셀리고사
+        </h2>
+
+        <p class="hero-description">
+          YOUR PIXEL JOURNEY STARTS HERE.
+        </p>
+      </div>
+
+      <div class="event-period">
+        <span class="period-label">EVENT PERIOD</span>
+        <span class="period-date">2026. 11. 20 — 11. 30</span>
+      </div>
+
+      <div class="hero-divider">
+        <span></span>
+        <span class="divider-star">✦</span>
+        <span></span>
+      </div>
+
+      <div class="hero-navigation">
+
+        <button class="hero-nav-button" onclick="navigateToSection('section-exam')">
+          <span class="nav-number">01</span>
+          <span class="nav-text">시험 응시하기</span>
+          <span class="nav-arrow">→</span>
+        </button>
+
+        <button class="hero-nav-button" onclick="navigateToSection('section-ticket-form')">
+          <span class="nav-number">02</span>
+          <span class="nav-text">수험표 만들기</span>
+          <span class="nav-arrow">→</span>
+        </button>
+
+      </div>
+
+      <div class="hero-footer">
+        <span>PIXLY PROJECT</span>
+        <span>PRESS START TO BEGIN</span>
+      </div>
+
+    </section>
+
+    <!-- SECTION 1 : EXAM CENTER -->
+    <section class="content-section" id="section-exam">
+
+      <div class="section-heading">
+        <div class="section-index">01 / EXAM CENTER</div>
+
+        <h2 class="section-title">
+          픽셀리고사 시험장
+        </h2>
+
+        <p class="section-description">
+          원하는 시험 영역을 선택해 응시해 주세요.
+        </p>
+      </div>
+
+      <div class="notice-panel">
+        <span class="notice-icon">!</span>
+        <div class="notice-content">
+          <strong>EXAM NOTICE</strong>
+          <p>모든 시험은 한 번씩만 참여해 주세요.</p>
+        </div>
+      </div>
+
+      <!-- EXAM BUTTONS START -->
+      <div class="exam-button-grid">
+
+        <!-- 다음 HTML 1-2에서 계속 -->
+
+
+        <!-- EVENT -->
+        <a href="#" class="exam-button exam-event">
+          <span class="exam-button-icon">✦</span>
+          <span class="exam-button-info">
+            <strong>(카페) 이벤트 영역</strong>
+            <small>CAFE EVENT</small>
+          </span>
+          <span class="exam-button-arrow">→</span>
+        </a>
+
+        <!-- RULE -->
+        <a href="#" class="exam-button exam-rule">
+          <span class="exam-button-icon">▤</span>
+          <span class="exam-button-info">
+            <strong>(카페) 규정 영역</strong>
+            <small>CAFE RULE</small>
+          </span>
+          <span class="exam-button-arrow">→</span>
+        </a>
+
+        <!-- RADER -->
+        <a href="#" class="exam-button exam-rader">
+          <span class="exam-button-icon">◆</span>
+          <span class="exam-button-info">
+            <strong>(픽셀리) 라더 영역</strong>
+            <small>RADER EXAM</small>
+          </span>
+          <span class="exam-button-arrow">→</span>
+        </a>
+
+        <!-- DEOKGAE -->
+        <a href="#" class="exam-button exam-deokgae">
+          <span class="exam-button-icon">◆</span>
+          <span class="exam-button-info">
+            <strong>(픽셀리) 덕개 영역</strong>
+            <small>DEOKGAE EXAM</small>
+          </span>
+          <span class="exam-button-arrow">→</span>
+        </a>
+
+        <!-- GAKBYEOL -->
+        <a href="#" class="exam-button exam-gakbyeol">
+          <span class="exam-button-icon">◆</span>
+          <span class="exam-button-info">
+            <strong>(픽셀리) 각별 영역</strong>
+            <small>GAKBYEOL EXAM</small>
+          </span>
+          <span class="exam-button-arrow">→</span>
+        </a>
+
+        <!-- GONGRYONG -->
+        <a href="#" class="exam-button exam-gongryong">
+          <span class="exam-button-icon">◆</span>
+          <span class="exam-button-info">
+            <strong>(픽셀리) 공룡 영역</strong>
+            <small>GONGRYONG EXAM</small>
+          </span>
+          <span class="exam-button-arrow">→</span>
+        </a>
+
+        <!-- JAMTTEUL -->
+        <a href="#" class="exam-button exam-jamtteul">
+          <span class="exam-button-icon">◆</span>
+          <span class="exam-button-info">
+            <strong>(픽셀리) 잠뜰 영역</strong>
+            <small>JAMTTEUL EXAM</small>
+          </span>
+          <span class="exam-button-arrow">→</span>
+        </a>
+
+        <!-- SUHYEON -->
+        <a href="#" class="exam-button exam-suhyeon">
+          <span class="exam-button-icon">◆</span>
+          <span class="exam-button-info">
+            <strong>(픽셀리) 수현 영역</strong>
+            <small>SUHYEON EXAM</small>
+          </span>
+          <span class="exam-button-arrow">→</span>
+        </a>
+
+      </div>
+      <!-- EXAM BUTTONS END -->
+
+      <div class="section-bottom-note">
+        <span>SELECT YOUR EXAM</span>
+        <span>8 AREAS AVAILABLE</span>
+      </div>
+
+    </section>
+
+    <!-- SECTION 2 : TICKET FORM -->
+    <section class="content-section ticket-form-section" id="section-ticket-form">
+
+      <div class="section-heading">
+        <div class="section-index">02 / TICKET GENERATOR</div>
+
+        <h2 class="section-title">
+          픽셀리고사 수험표 만들기
+        </h2>
+
+        <p class="section-description">
+          나만의 픽셀리고사 수험표를 발급받아 보세요.
+        </p>
+      </div>
+
+      <div class="form-guide-panel">
+        <span class="guide-icon">i</span>
+        <div>
+          <strong>HOW TO MAKE YOUR TICKET</strong>
+          <p>모든 시험에 응시하시지 않아도 제작하실 수 있습니다.</p>
+        </div>
+      </div>
+
+      <form id="ticketForm">
+
+        <!-- NICKNAME -->
+        <div class="form-group nickname-group">
+          <label for="nickname">
+            <span class="form-label-number">01</span>
+            닉네임
+            <span class="required-mark">*</span>
+          </label>
+
+          <input
+            type="text"
+            id="nickname"
+            name="nickname"
+            placeholder="닉네임을 입력해 주세요."
+            maxlength="20"
+            autocomplete="off"
+            required
+          >
+        </div>
+
+        <!-- SCORE GUIDE -->
+        <div class="score-guide">
+          <strong> SCORE INPUT GUIDE </strong>
+          <p>점수는 숫자만 입력해 주세요!</p>
+          <p>점수가 없는 시험 영역은 빈 칸으로 두시면 됩니다.</p>
+        </div>
+
+        <!-- 다음 HTML 1-3에서 계속 -->
+
+        
+        <!-- SCORE INPUTS -->
+        <div class="score-input-grid">
+
+          <div class="form-group score-group score-event">
+            <label for="score-event">이벤트 영역 점수</label>
+            <input type="number" id="score-event" name="event" min="0" step="1" placeholder="점수 입력">
+          </div>
+
+          <div class="form-group score-group score-rule">
+            <label for="score-rule">규정 영역 점수</label>
+            <input type="number" id="score-rule" name="rule" min="0" step="1" placeholder="점수 입력">
+          </div>
+
+          <div class="form-group score-group score-rader">
+            <label for="score-rader">라더 영역 점수</label>
+            <input type="number" id="score-rader" name="rader" min="0" step="1" placeholder="점수 입력">
+          </div>
+
+          <div class="form-group score-group score-deokgae">
+            <label for="score-deokgae">덕개 영역 점수</label>
+            <input type="number" id="score-deokgae" name="deokgae" min="0" step="1" placeholder="점수 입력">
+          </div>
+
+          <div class="form-group score-group score-gakbyeol">
+            <label for="score-gakbyeol">각별 영역 점수</label>
+            <input type="number" id="score-gakbyeol" name="gakbyeol" min="0" step="1" placeholder="점수 입력">
+          </div>
+
+          <div class="form-group score-group score-gongryong">
+            <label for="score-gongryong">공룡 영역 점수</label>
+            <input type="number" id="score-gongryong" name="gongryong" min="0" step="1" placeholder="점수 입력">
+          </div>
+
+          <div class="form-group score-group score-jamtteul">
+            <label for="score-jamtteul">잠뜰 영역 점수</label>
+            <input type="number" id="score-jamtteul" name="jamtteul" min="0" step="1" placeholder="점수 입력">
+          </div>
+
+          <div class="form-group score-group score-suhyeon">
+            <label for="score-suhyeon">수현 영역 점수</label>
+            <input type="number" id="score-suhyeon" name="suhyeon" min="0" step="1" placeholder="점수 입력">
+          </div>
+
+        </div>
+
+        <!-- FORM SUBMIT -->
+        <button type="submit" class="ticket-submit-button">
+          <span>수험표 만들기</span>
+          <span class="submit-arrow">→</span>
+        </button>
+
+      </form>
+
+      <div class="section-bottom-note">
+        <span>PIXLY TICKET GENERATOR</span>
+        <span>CREATE YOUR ID CARD</span>
+      </div>
+
+    </section>
+
+    <!-- SECTION 3 : GENERATED TICKET -->
+    <section class="content-section result-section" id="section-ticket-result" hidden>
+
+      <div class="section-heading">
+        <div class="section-index">03 / YOUR EXAM TICKET</div>
+
+        <h2 class="section-title">
+          수험표 발급 완료
+        </h2>
+
+        <p class="section-description">
+          나만의 픽셀리고사 수험표가 도착했어!
+        </p>
+      </div>
+
+      <!-- CAPTURE AREA -->
+      <div class="ticket-capture-area" id="ticketCapture">
+
+        <div class="issued-ticket">
+
+          <div class="ticket-topline">
+            <span>PIXLY EXAM SYSTEM</span>
+            <span class="ticket-status">● ISSUED</span>
+          </div>
+
+          <div class="ticket-main-title">
+            <div class="ticket-title-en">PIXELI EXAMINATION</div>
+            <h2>수 험 표</h2>
+            <div class="ticket-title-sub">OFFICIAL EXAMINATION TICKET</div>
+          </div>
+
+          <div class="ticket-name-area">
+            <span class="ticket-field-label">NAME / 닉네임</span>
+            <strong id="resultNickname">닉네임</strong>
+          </div>
+
+          <div class="ticket-score-area">
+
+            <div class="ticket-score-heading">
+              <span>EXAMINATION SCORE</span>
+              <span>RESULT</span>
+            </div>
+
+            <div class="ticket-score-grid">
+
+              <div class="ticket-score-item score-event">
+                <span>이벤트 영역</span>
+                <strong id="resultEvent">-</strong>
+              </div>
+
+              <div class="ticket-score-item score-rule">
+                <span>규정 영역</span>
+                <strong id="resultRule">-</strong>
+              </div>
+
+              <div class="ticket-score-item score-rader">
+                <span>라더 영역</span>
+                <strong id="resultRader">-</strong>
+              </div>
+
+              <div class="ticket-score-item score-deokgae">
+                <span>덕개 영역</span>
+                <strong id="resultDeokgae">-</strong>
+              </div>
+
+              <div class="ticket-score-item score-gakbyeol">
+                <span>각별 영역</span>
+                <strong id="resultGakbyeol">-</strong>
+              </div>
+
+              <div class="ticket-score-item score-gongryong">
+                <span>공룡 영역</span>
+                <strong id="resultGongryong">-</strong>
+              </div>
+
+              <div class="ticket-score-item score-jamtteul">
+                <span>잠뜰 영역</span>
+                <strong id="resultJamtteul">-</strong>
+              </div>
+
+              <div class="ticket-score-item score-suhyeon">
+                <span>수현 영역</span>
+                <strong id="resultSuhyeon">-</strong>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="ticket-date-area">
+            <div>
+              <span>ISSUE DATE</span>
+              <strong id="resultDate">2026. 11. 17.</strong>
+            </div>
+
+            <div>
+              <span>ISSUED BY</span>
+              <strong>PIXLY EVENT</strong>
+            </div>
+          </div>
+
+          <div class="ticket-bottom">
+            픽셀리 비공식 카페
+            <span>〈픽셀리고사 이벤트〉</span>
+          </div>
+
+          <div class="ticket-decor">
+            <span>✦</span>
+            <span>PIXELI</span>
+            <span>✦</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- TICKET ACTIONS -->
+      <div class="ticket-actions">
+
+        <button type="button" class="ticket-download-button" id="downloadTicket">
+          <span>▣</span>
+          수험표 이미지 저장
+        </button>
+
+        <button type="button" class="ticket-edit-button" id="editTicket">
+          다시 만들기
+        </button>
+
+      </div>
+
+      <p class="ticket-share-guide">
+        수험표를 이미지로 저장한 뒤 자유롭게 공유해 줘!
+      </p>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+      <div class="footer-logo">PIXLY</div>
+
+      <p>PIXELI UNOFFICIAL CAFE EVENT</p>
+      <p>픽셀리 비공식 카페 〈픽셀리고사 이벤트〉</p>
+
+      <div class="footer-colors">
+        <span class="pixel-color-red">■</span>
+        <span class="pixel-color-orange">■</span>
+        <span class="pixel-color-yellow">■</span>
+        <span class="pixel-color-green">■</span>
+        <span class="pixel-color-sky">■</span>
+        <span class="pixel-color-purple">■</span>
+      </div>
+
+      <small>© 2026 PIXLY. UNOFFICIAL FAN EVENT.</small>
+
+    </footer>
+
+  </main>
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
