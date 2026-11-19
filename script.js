@@ -13,7 +13,7 @@
 // 주소를 입력하지 않은 항목은 이동하지 않아.
 
 const EXAM_LINKS = {
-  event: "",
+  event: "https://forms.gle/n1HrJTY9mGbDxzjt6",
   rule: "",
   rader: "https://forms.gle/49ooyGvHofc5rqRC7",
   deokgae: "https://forms.gle/z77xHR1iPwCSzUMn6",
