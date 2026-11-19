@@ -17,7 +17,7 @@ const EXAM_LINKS = {
   rule: "",
   rader: "https://forms.gle/49ooyGvHofc5rqRC7",
   deokgae: "https://forms.gle/z77xHR1iPwCSzUMn6",
-  gakbyeol: "",
+  gakbyeol: "https://forms.gle/PfbHFNKcvhS7mf9HA",
   gongryong: "",
   jamtteul: "",
   suhyeon: ""
