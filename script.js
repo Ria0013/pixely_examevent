@@ -41,7 +41,7 @@ function navigateToSection(sectionId) {
 
 
 /* ========================================
-   03. PIXEL PARTICLES
+   03. PIXEL PARTICLES 
 ======================================== */
 
 function createPixelParticles() {
