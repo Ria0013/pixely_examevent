@@ -14,13 +14,13 @@
 
 const EXAM_LINKS = {
   event: "https://forms.gle/n1HrJTY9mGbDxzjt6",
-  rule: "",
+  rule: "https://forms.gle/qtccwxh6eijy4FHQ6",
   rader: "https://forms.gle/49ooyGvHofc5rqRC7",
   deokgae: "https://forms.gle/z77xHR1iPwCSzUMn6",
   gakbyeol: "https://forms.gle/PfbHFNKcvhS7mf9HA",
   gongryong: "https://forms.gle/fzU1LwnZCwMRpjVZ7",
-  jamtteul: "",
-  suhyeon: ""
+  jamtteul: "https://forms.gle/MLVp3SwcpPADmc6z7",
+  suhyeon: "https://forms.gle/mjHyJQWAm55nEUbH7"
 };
 
 
